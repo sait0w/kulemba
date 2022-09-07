@@ -22,20 +22,20 @@ int main(){
 
  const int size = sizeof(charray2)/sizeof(charray2[0]);
 
- vector <char> charray (size);
- vector <char> left_side_ary(size-1);
+ vector <char> charray {};
  int rev_cont;
 
+ //Number of repetions equivalent to size
   for(cont=0;cont<size;++cont){
    space(size-cont);
 
    if(cont>0){
-   /* Reverse push_back */
-  left_side_ary.push_back(charray2[cont]);
-   for(rev_cont=left_side_ary.size()-1;rev_cont>=0;rev_cont--){
-    cout << left_side_ary.at(rev_cont);
+   /* Reverse printing */
+    for(rev_cont=cont;rev_cont>0;rev_cont--){
+     cout << charray[rev_cont];
     }
    }
+   //Charray pushback and print
    charray.push_back(charray2[cont]);
    print_charray(charray);
    cout << endl;
