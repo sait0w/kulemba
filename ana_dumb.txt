@@ -1,0 +1,29 @@
+Enter your word of choice: Ana is a dumb idiot 
+                   A
+                  AnA
+                 AnanA
+                Ana anA
+               Ana i anA
+              Ana isi anA
+             Ana is si anA
+            Ana is a si anA
+           Ana is a a si anA
+          Ana is a d a si anA
+         Ana is a dud a si anA
+        Ana is a dumud a si anA
+       Ana is a dumbmud a si anA
+      Ana is a dumb bmud a si anA
+     Ana is a dumb i bmud a si anA
+    Ana is a dumb idi bmud a si anA
+   Ana is a dumb ididi bmud a si anA
+  Ana is a dumb idioidi bmud a si anA
+ Ana is a dumb idiotoidi bmud a si anA
+Process exited with status 0
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+[Processo concluído]
+
