@@ -6,12 +6,12 @@ using std::endl;
 
 void cls();
 void print_dash(int num);
-void verify(long double change);
+void verify(double change);
 
 int main()
 {
     cls();
-    long double change{};
+    double change {};
     print_dash(37);
     cout << "Change Conversion Table (US dollar)::" << endl;
     cout << "1 dollar is 100¢" << endl;
@@ -52,34 +52,34 @@ void print_table(int array[5])
     cout << "Pennies: " << array[4] << endl;
 }
 
-void verify(long double change)
+void verify(double change)
 {
-    int array[5]{};
-
-    change = abs(change)/100;
-    while (change >= 1)
+    int array[5] {};
+    change /= 100;
+    auto num {change};
+        while (num > 1.00)
     {
-        --change;
+        --num;
         ++array[0];
     }
-    while (change >= 0.25)
+    while (num >= 0.25)
     {
-        change -= 0.25;
+        num -= 0.25;
         ++array[1];
     }
-    while (change >= 0.10)
+    while (num >= 0.10)
     {
-        change -= 0.10;
+        num -= 0.10;
         ++array[2];
     }
-    while (change >= 0.5)
+    while (num >= 0.5)
     {
-        change -= 0.05;
+        num -= 0.05;
         ++array[3];
     }
-    while (change >= 0.00)
+    while (num >= 0.00)
     {
-        change -= 0.01;
+        num -= 0.01;
         ++array[4];
     }
     print_table(array);
