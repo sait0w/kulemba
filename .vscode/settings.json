@@ -99,7 +99,8 @@
       "iomanip": "cpp",
       "stack": "cpp",
       "__tree": "cpp",
-      "map": "cpp"
+      "map": "cpp",
+      "stdlib.h": "c"
     },
     "C_Cpp.errorSquiggles": "Enabled"
   }

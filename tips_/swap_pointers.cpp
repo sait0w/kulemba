@@ -1,23 +1,22 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::vector;
+#include <array>
+using namespace std;
 
 void cls();
 void pause();
 void swap(int *a,int *b);
 void dash(int num);
 void display(vector <string> *v);
+void alter(vector <string> **a);
 
 int main()
 {
     cls();
-    vector <string> stooges {"Larry","Moe","Garry"};
-    display(&stooges);
+    vector <string> stooges {"Gearry","Larry","Moe"};
+    array <int, 3> numarray {1, 2, 3};
+    cin >> numarray.at(2);
 
  return 0;
 }
@@ -50,9 +49,38 @@ void dash(int num)
   cout <<  endl;
 }
 
+void alter(vector <string> **a)
+{
+    int cou {}, input {};
+    cout << "Choose which word to alter: " << endl;
+    for(auto cont1 : **a)
+    {
+      cout << cont1 << "[" << cou << "]" << "\t";
+      ++cou;
+    }
+    cout << endl << "Enter the number referring to that word:";
+    cin >> input;
+    switch(input)
+    {
+        case 0:
+            cout << "Alter word:";
+            cin >> (**a).at(0);
+        break;
+        case 1:
+            cout << "Alter word:";
+            cin >> (**a).at(1); 
+        break;
+        case 2:
+            cout << "Alter word:";
+            cin >> (**a).at(2);
+        break;
+    }
+}
+
 void display(vector <string> *v)
 {
+    alter(&v);
     for(auto cont : *v)
         cout << cont << "\t";
-    cout << endl;
+    cout << endl << endl;
 }

@@ -28,9 +28,9 @@ int main()
     return 0;
 }
 
-void cls()
+void cls() 
 {
-    system("clear");
+    std::cout << "\x1B[2J\x1B[H";
 }
 
 void print_dash(int num)
